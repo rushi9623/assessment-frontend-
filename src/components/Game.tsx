@@ -60,7 +60,14 @@ export default function Game() {
   const [showHowTo, setShowHowTo] = useState(false);
 
   return (
-    <div className={`flex lg:flex-row flex-col ${game.username ? 'bg-green-100' : 'bg-blue-200'} min-h-screen`}>
+    <div
+      className={`flex lg:flex-row flex-col min-h-screen`}
+      style={{
+        backgroundImage: `url('https://www.cnet.com/a/img/resize/04cebcd64be8b7ebcf1dfd001da8c13a3d664dd2/hub/2022/04/15/b903ab00-5c08-4b6f-8bc9-30f6adae8003/exploding-kittens-on-netflix.jpg?auto=webp&fit=crop&height=675&width=1200')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
       <div className="flex flex-col items-center justify-center content-center">
         <Modal
           show={openModal}
